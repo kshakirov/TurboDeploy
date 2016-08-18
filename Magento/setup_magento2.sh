@@ -1,7 +1,7 @@
 sudo rm -r /var/www
 sudo ln -s /home/ubuntu/TurboInternational /var/www
 sudo   chown -R www-data /var/www
-cd  /var/wwww
+cd  /var/www
 sudo chown -R www-data .
 sudo find . -type f -exec chmod 400 {} \;
 sudo find . -type d -exec chmod 500 {} \;
