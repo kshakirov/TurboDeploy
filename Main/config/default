@@ -1,0 +1,38 @@
+
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server ipv6only=on;
+
+	root /usr/share/nginx/html;
+	index index.html index.htm;
+
+	server_name storestaging.turbointernational.com;
+	location / {
+		proxy_set_header X-Real-IP $remote_addr;
+        	proxy_set_header X-Forwarded-For $remote_addr;
+	        proxy_set_header Host $host;
+		proxy_connect_timeout       6000;
+		proxy_send_timeout          6000;
+		proxy_read_timeout          6000;
+		send_timeout                6000;
+        	proxy_pass http://magento;
+	}
+	location /elastic/ {
+			proxy_pass http://magento-proxy:4569/;
+			proxy_redirect off;
+			proxy_set_header Host $host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	}
+	location /imageserver/ {
+			proxy_pass http://metadata.turbointernational.com:4570/;
+			proxy_redirect off;
+			proxy_set_header Host $host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	}
+
+
+
+}
