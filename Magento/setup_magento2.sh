@@ -1,10 +1,8 @@
-
-
-sudo usermod -G www-data ubuntu && sudo   chown -R ubuntu www
-#sudo usermod -G www-data ubuntu
-chown -R ubuntu .
-cd /var/www
-echo pwd
+sudo rm -r /var/www
+sudo ln -s ~/TurboInternational /var/www
+sudo   chown -R www-data /var/www
+cd  /var/wwww
+chown -R www-data .
 find . -type f -exec chmod 400 {} \;
 find . -type d -exec chmod 500 {} \;
 find var/ -type f -exec chmod 600 {} \;
