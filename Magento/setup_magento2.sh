@@ -1,6 +1,6 @@
 
 
-
+sudo usermod -G www-data ubuntu && sudo   chown -R ubuntu www
 #sudo usermod -G www-data ubuntu
 chown -R ubuntu .
 cd /var/www
