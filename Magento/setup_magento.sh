@@ -1,3 +1,4 @@
+sudo apt-get update
 sudo apt-get install -y apache2  php5 php5-mysql php5-curl
 sudo apt-get install -y wget git
 sudo a2enmod rewrite
