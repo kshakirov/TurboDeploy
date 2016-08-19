@@ -1,0 +1,2 @@
+1.change bind-address in redis.conf
+2. restart service
