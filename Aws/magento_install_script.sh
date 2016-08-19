@@ -13,3 +13,5 @@ sudo lxc-create -n ruby-proxy -t ubuntu
 
 sudo apt-get install -y  nginx mc screen lynx
 sudo lxc-start  -n magento -d
+sudo lxc-start -n redis -d
+sudo lxc-start -n mysql -d
