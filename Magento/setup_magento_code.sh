@@ -1,4 +1,6 @@
 cp keys/* ~/.ssh/
+chmod 660 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
 cd ~
 git config --global user.name kshakirov
 git config --global user.email kirill.shakirov4@gmail.com
