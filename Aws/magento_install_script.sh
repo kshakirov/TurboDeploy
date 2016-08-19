@@ -12,3 +12,4 @@ sudo lxc-create -n magento -t ubuntu
 sudo lxc-create -n ruby-proxy -t ubuntu
 
 sudo apt-get install -y  nginx mc screen lynx
+sudo lxc-start  -n magento -d

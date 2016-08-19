@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 sudo apt-get update
-sudo apt-get install redis
+sudo apt-get install redis-server
