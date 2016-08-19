@@ -15,3 +15,4 @@ sudo apt-get install -y  nginx mc screen lynx
 sudo lxc-start  -n magento -d
 sudo lxc-start -n redis -d
 sudo lxc-start -n mysql -d
+sudo lxc-start -n elastic -d

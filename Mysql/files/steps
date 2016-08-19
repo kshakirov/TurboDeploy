@@ -1,3 +1,5 @@
 1. Change bind-address in /etc/mysql/my.cnf
 2. Add magento host to etc/hosts
-2. Restart service
+3. Restart service
+4.
+4. bzcat  magento.sql.bz2 | mysql -u root -p magento
