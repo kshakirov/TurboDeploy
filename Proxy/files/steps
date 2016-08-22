@@ -1,0 +1,4 @@
+1. git clone https://github.com/turbointernational/MagentoProxy.git
+2. cd MagentoProxy/proxy
+3. bundle install
+4. set MAGENTO_HOST=ec2-54-183-142-20.us-west-1.compute.amazonaws.com
