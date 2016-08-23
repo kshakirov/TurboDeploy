@@ -1,4 +1,6 @@
 
+proxy_cache_path /tmp/nginx levels=1:2 keys_zone=my_zone:10m inactive=60m;
+proxy_cache_key "$scheme$request_method$host$request_uri";
 
 server {
 	listen 80 default_server;
@@ -9,9 +11,13 @@ server {
 
 	server_name storestaging.turbointernational.com;
 	location / {
+	    proxy_cache my_zone;
+        add_header X-Proxy-Cache $upstream_cache_status;
+
 		proxy_set_header X-Real-IP $remote_addr;
-        	proxy_set_header X-Forwarded-For $remote_addr;
-	        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+	    proxy_set_header Host $host;
+
 		proxy_connect_timeout       6000;
 		proxy_send_timeout          6000;
 		proxy_read_timeout          6000;

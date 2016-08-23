@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install -y apache2  php5 php5-mysql php5-curl
+sudo apt-get install -y apache2  php5 php5-mysql php5-curl nginx
 sudo apt-get install -y wget git lynx locate
 sudo a2enmod rewrite
 sudo apt-get install -y php5-mcrypt

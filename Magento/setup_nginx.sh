@@ -1,0 +1,1 @@
+sudo apt-get install php5-fpm php5-mhash php5-mcrypt php5-curl php5-cli php5-mysql php5-gd php5-xsl php5-json php5-intl php-pear php5-dev php5-common php-soap libcurl3 curl -y
